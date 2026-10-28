@@ -199,11 +199,8 @@ footer{border-top:1px solid var(--line);padding:72px 0 120px;font-size:13px;colo
   .half.active{flex:2}
   .hero:hover .half,.hero .half:hover{flex:1} .hero .half.active,.hero:hover .half.active,.hero .half.active:hover{flex:2}
   .half .bg{transform:none!important}
-  .yoko-half .bg{filter:brightness(1.12) saturate(.9) contrast(.95)}
-  .half::after{background:linear-gradient(180deg,rgba(18,16,14,.15) 0%,rgba(18,16,14,0) 35%,rgba(18,16,14,.55) 100%)}
-  .yoko-half::after{background:linear-gradient(180deg,rgba(18,16,14,.7) 0%,rgba(18,16,14,.1) 45%,rgba(18,16,14,.5) 100%)}
+  /* 色合い（写真の明るさ・影・高知の色）はPCと同じ。スマホだけ明るくすると文字が沈むため */
   .kochi-half{padding-bottom:64px}
-  .kochi-half .bg{background:radial-gradient(120% 90% at 70% 10%,rgba(120,210,200,.45),transparent 60%),linear-gradient(170deg,#2b6663 0%,#17393b 70%,#10292b 100%)}
   .kochi-half .photo-soon{top:42%;font-size:10px;padding:6px 12px}
   .half .city{font-size:26px;transition:font-size .6s}
   .half .label{text-shadow:0 1px 14px rgba(0,0,0,.55)}
