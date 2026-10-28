@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Works｜Shibata Sound Works</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Shippori+Mincho:wght@500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="hd" class="scrolled">
+  <a href="index.html" class="logo"><img src="img/logo-bar.webp" alt="Shibata Sound Works"></a>
+  <nav>
+    <a href="index.html#studios">Studios</a><a href="index.html#schedule">Schedule</a><a href="works.html" style="color:var(--text)">Works</a><a href="index.html#price">Price</a><a href="flow.html">Flow</a><a href="index.html#news">News</a><a href="index.html#contact">Contact</a>
+  </nav>
+  <button class="menu-btn">Menu</button>
+</header>
+
+<div class="page-hero">
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">Top</a>　/　Works</div>
+    <h1 class="h2">Works<small>制作実績</small></h1>
+    <p>Shibata Sound Worksでレコーディング・ミックス・マスタリングを担当した作品です。センター北・高知、どちらのスタジオで制作した作品かも表示しています。</p>
+    <div style="margin-top:28px"><span class="memo">ここからは「ページを分けた場合」の見え方です。トップの「Works」から移動してきた想定です</span></div>
+  </div>
+</div>
+
+<section style="padding-top:72px">
+  <div class="wrap">
+
+    <!-- ピックアップ（動画を大きく） -->
+    <div class="feature">
+      <div class="video" role="img" aria-label="動画のサムネイル"></div>
+      <div>
+        <div class="eyebrow">Pick Up</div>
+        <h3>Harbor Lights</h3>
+        <p style="color:var(--text);font-size:15px">The Driftwoods</p>
+        <p style="margin-top:12px">（ここに作品の紹介文が入ります。録音時のエピソードや編成、こだわったポイントなど。）</p>
+        <div class="roles" style="display:flex;gap:6px;margin-top:16px;flex-wrap:wrap"></div>
+        <div class="links"><a href="#" style="background:var(--text);color:var(--bg);border-color:var(--text)">▶ YouTubeで聴く</a></div>
+        <p style="font-size:12px;color:var(--dim);margin-top:12px">配信：<a href="#" style="border-bottom:1px solid var(--line)">Spotify</a>　<a href="#" style="border-bottom:1px solid var(--line)">Apple Music</a></p>
+        <div style="margin-top:22px"><span class="memo">視聴はYouTubeが基本（誰でも無料で最後まで聴けて、ページ内でそのまま再生できます）。配信サイトのリンクは、あれば小さく添える形です</span></div>
+      </div>
+    </div>
+
+    <div class="filter-bar">
+      <div class="grp"><span class="lbl">STUDIO</span>
+        <div class="chips" id="fs"><button class="on" data-f="all">すべて</button><button data-f="Y">センター北</button><button data-f="K">高知</button></div>
+      </div>
+      <div class="grp"><span class="lbl">WORK</span>
+        <div class="chips" id="fr"><button class="on" data-f="all">すべて</button><button data-f="Rec">レコーディング</button><button data-f="Mix">ミックス</button><button data-f="Master">マスタリング</button><button data-f="Track">トラック制作</button></div>
+      </div>
+    </div>
+
+    <div class="count" id="count"></div>
+    <div class="works-grid" id="list"></div>
+
+    <div style="margin-top:56px"><span class="memo">作品を追加するときは、管理画面で「ジャケット画像・アーティスト名・曲名・担当した工程・スタジオ・YouTubeのURL（配信リンクは任意）」を入力するだけ。一覧・トップ・絞り込みに自動で反映されます（作品名はすべてサンプルです）</span></div>
+  </div>
+</section>
+
+<section class="news" style="padding:96px 0;text-align:center">
+  <div class="wrap">
+    <p class="eyebrow">Next is your sound.</p>
+    <h2 style="font-family:var(--mincho);font-weight:500;font-size:clamp(22px,2.6vw,30px);letter-spacing:.12em;margin:14px 0 32px">あなたの作品も、ここに。</h2>
+    <a href="index.html#contact" class="more">Contact <span>→</span></a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><img src="img/logo.webp" alt="Shibata Sound Works" class="logo-box"></div>
+      <div><h4 class="y">Yokohama</h4>〒224-0003<br>神奈川県横浜市都筑区中川中央1-37-21<br>シンコウビルB1</div>
+      <div><h4 class="k">Kochi</h4><span class="tbd">スタジオ名・住所（未定）</span><br>高知県</div>
+    </div>
+    <div class="copy">© 2026 Shibata Sound Works</div>
+  </div>
+</footer>
+
+<div class="proposal-bar">
+  <span><b>提案用デザインカンプ</b>｜Worksページ（作品はすべてサンプルです）</span>
+  <button id="memoToggle">提案メモを隠す</button>
+  <a href="index.html">トップに戻る</a>
+</div>
+
+<script src="works-data.js"></script>
+<script>
+document.getElementById('memoToggle').onclick=e=>{
+  const h=document.body.classList.toggle('hide-memo');
+  e.target.textContent=h?'提案メモを表示':'提案メモを隠す';
+};
+// ピックアップの担当タグ
+document.querySelector('.feature .roles').innerHTML='<span class="K" style="font-size:11px;border:1px solid rgba(79,179,173,.45);color:var(--kochi);padding:1px 10px;border-radius:99px">高知</span>'+
+  WORKS[0].roles.map(r=>`<span style="font-size:11px;border:1px solid var(--line);color:var(--mid);padding:1px 10px;border-radius:99px">${ROLE_JA[r]}</span>`).join('');
+
+// 一覧と絞り込み
+const list=document.getElementById('list'), count=document.getElementById('count');
+list.innerHTML=WORKS.map(workCard).join('');
+let fs='all', fr='all';
+function apply(){
+  let n=0;
+  list.querySelectorAll('.work').forEach(w=>{
+    const ok=(fs==='all'||w.dataset.s===fs)&&(fr==='all'||w.dataset.r.split(' ').includes(fr));
+    w.style.display=ok?'':'none'; if(ok)n++;
+  });
+  count.textContent=n+' works';
+}
+function bind(id,set){
+  const bs=document.querySelectorAll('#'+id+' button');
+  bs.forEach(b=>b.onclick=()=>{bs.forEach(x=>x.classList.toggle('on',x===b));set(b.dataset.f);apply();});
+}
+bind('fs',v=>fs=v); bind('fr',v=>fr=v); apply();
+</script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flow｜Shibata Sound Works</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Shippori+Mincho:wght@500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* 工程ナビ（上部の目次） */
+.steps-nav{position:sticky;top:57px;z-index:20;background:#12100ee6;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.steps-nav ol{list-style:none;display:flex;justify-content:space-between;margin:0;gap:8px;padding:14px 0;overflow-x:auto;scrollbar-width:none}
+.steps-nav a{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--dim);white-space:nowrap;transition:color .3s;letter-spacing:.08em}
+.steps-nav a b{font-family:var(--en);font-weight:500;font-size:15px;width:26px;height:26px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:.3s}
+.steps-nav a.on{color:var(--text)}
+.steps-nav a.on b{background:var(--yoko);border-color:var(--yoko);color:var(--bg)}
+.steps-nav .bar{height:2px;background:var(--line);position:relative}
+.steps-nav .bar i{position:absolute;left:0;top:0;bottom:0;width:0;background:linear-gradient(90deg,var(--yoko),var(--kochi));transition:width .2s}
+
+/* 工程 */
+.timeline{position:relative}
+.step{display:grid;grid-template-columns:120px 1fr 1fr;gap:48px;padding:88px 0;border-bottom:1px solid var(--line);align-items:center;scroll-margin-top:130px}
+.step:last-child{border-bottom:0}
+.step .no{font-family:var(--en);font-size:88px;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(236,230,222,.35);align-self:start}
+.step .en{font-family:var(--en);font-style:italic;color:var(--yoko);font-size:18px;letter-spacing:.1em}
+.step h2{font-family:var(--mincho);font-weight:500;font-size:clamp(22px,2.4vw,30px);letter-spacing:.1em;margin:6px 0 18px}
+.step p{color:var(--mid);font-size:14px}
+.step .ph{aspect-ratio:4/3;background-size:cover;background-position:center;filter:saturate(.9)}
+.step:nth-child(even) .ph{order:-1}
+.step:nth-child(even) .no{order:-2}
+.badge{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-size:12px;color:var(--text);border:1px solid rgba(212,146,79,.5);padding:4px 14px;border-radius:99px}
+.badge::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--yoko)}
+.point{margin-top:18px;background:var(--surface);border-left:2px solid var(--yoko);padding:12px 16px;font-size:13px;color:var(--mid)}
+.point b{color:var(--text);font-weight:500}
+
+@media (max-width:860px){
+  .steps-nav{top:47px}
+  .steps-nav a span{display:none}
+  .step{grid-template-columns:minmax(0,1fr);gap:20px;padding:56px 0}
+  .step .no{font-size:56px}
+  .step:nth-child(even) .ph,.step:nth-child(even) .no{order:0}
+}
+</style>
+</head>
+<body>
+
+<header id="hd" class="scrolled">
+  <a href="index.html" class="logo"><img src="img/logo-bar.webp" alt="Shibata Sound Works"></a>
+  <nav>
+    <a href="index.html#studios">Studios</a><a href="index.html#schedule">Schedule</a><a href="works.html">Works</a><a href="index.html#price">Price</a><a href="flow.html" style="color:var(--text)">Flow</a><a href="index.html#news">News</a><a href="index.html#contact">Contact</a>
+  </nav>
+  <button class="menu-btn">Menu</button>
+</header>
+
+<div class="page-hero">
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">Top</a>　/　Flow</div>
+    <h1 class="h2">Flow<small>レコーディングの流れ</small></h1>
+    <p>ご相談から納品まで、5つのステップで進みます。センター北・高知、どちらのスタジオでも流れは同じです。</p>
+    <div style="margin-top:28px"><span class="memo">今のサイトの「work flow」の内容をそのまま引き継いでいます。スクロールに合わせて、上の工程バーが進みます</span></div>
+  </div>
+</div>
+
+<div class="steps-nav" role="navigation" aria-label="工程">
+  <div class="wrap">
+    <ol id="snav">
+      <li><a href="#s1"><b>1</b><span>事前ミーティング</span></a></li>
+      <li><a href="#s2"><b>2</b><span>セッティング</span></a></li>
+      <li><a href="#s3"><b>3</b><span>レコーディング</span></a></li>
+      <li><a href="#s4"><b>4</b><span>ミキシング</span></a></li>
+      <li><a href="#s5"><b>5</b><span>立会いミキシング・納品</span></a></li>
+    </ol>
+  </div>
+  <div class="bar"><i id="sbar"></i></div>
+</div>
+
+<section style="padding:0">
+  <div class="wrap timeline">
+
+    <article class="step" id="s1">
+      <div class="no">01</div>
+      <div>
+        <div class="en">Meeting</div>
+        <h2>事前ミーティング</h2>
+        <p>アーティストとエンジニアが同じ方向を向いて作業するための、大切な工程です。作品のクオリティに大きく影響します。</p>
+        <div class="point"><b>ご準備いただくと進めやすいもの：</b>目指したい音に近いアーティストの音源。エンジニアがイメージをつかみやすくなります。</div>
+      </div>
+      <div class="ph" style="background-image:url(img/room5.webp)"></div>
+    </article>
+
+    <article class="step" id="s2">
+      <div class="no">02</div>
+      <div>
+        <div class="en">Setting</div>
+        <h2>セッティング</h2>
+        <p>目指したい音源から逆算して録り方を考え、機材の選定とセッティングを行います。マイクの位置なども細かく調整していきます。</p>
+      </div>
+      <div class="ph" style="background-image:url(img/room3.webp)"></div>
+    </article>
+
+    <article class="step" id="s3">
+      <div class="no">03</div>
+      <div>
+        <div class="en">Recording</div>
+        <h2>レコーディング</h2>
+        <p>バンドの場合は、リズム楽器（ドラム・ベースなど）から順に重ねて録る方法と、全員で同時に演奏して録る方法があります。何度か録って、いちばん良いテイクを採用します。</p>
+        <div class="point"><b>ミスした部分だけの弾き直しや、編集も可能です。</b></div>
+      </div>
+      <div class="ph" style="background-image:url(img/room4.webp)"></div>
+    </article>
+
+    <article class="step" id="s4">
+      <div class="no">04</div>
+      <div>
+        <div class="en">Mixing</div>
+        <h2>ミキシング</h2>
+        <p>録音した音素材の音質を整えて混ぜ合わせ、1つの曲に組み上げます。ご要望をふまえてエンジニアがじっくり時間をかけて仕上げ、最初の音源をお渡しします。曲のクオリティを左右する重要な工程なので、しっかり日数をかけています。</p>
+        <span class="badge">約2〜4週間</span>
+      </div>
+      <div class="ph" style="background-image:url(img/room2.webp)"></div>
+    </article>
+
+    <article class="step" id="s5">
+      <div class="no">05</div>
+      <div>
+        <div class="en">Final Mix &amp; Delivery</div>
+        <h2>立会いミキシング・納品</h2>
+        <p>アーティスト立会いのもと、お渡しした音源へのご要望を反映する最終ミキシングを行います。完成後、曲全体の音量や音質を整える仕上げ（マスタリング）をして、完成したマスター音源をお渡しします。</p>
+      </div>
+      <div class="ph" style="background-image:url(img/room6.webp)"></div>
+    </article>
+
+  </div>
+</section>
+
+<section class="news" style="padding:96px 0;text-align:center">
+  <div class="wrap">
+    <p class="eyebrow">Let's make it together.</p>
+    <h2 style="font-family:var(--mincho);font-weight:500;font-size:clamp(22px,2.6vw,30px);letter-spacing:.12em;margin:14px 0 20px">まずは、ミーティングから。</h2>
+    <p style="color:var(--mid);font-size:14px;margin-bottom:32px">料金は <a href="index.html#price" style="border-bottom:1px solid var(--line)">Price</a> をご覧ください。</p>
+    <a href="index.html#contact" class="more">Contact <span>→</span></a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><img src="img/logo.webp" alt="Shibata Sound Works" class="logo-box"></div>
+      <div><h4 class="y">Yokohama</h4>〒224-0003<br>神奈川県横浜市都筑区中川中央1-37-21<br>シンコウビルB1</div>
+      <div><h4 class="k">Kochi</h4><span class="tbd">スタジオ名・住所（未定）</span><br>高知県</div>
+    </div>
+    <div class="copy">© 2026 Shibata Sound Works</div>
+  </div>
+</footer>
+
+<div class="proposal-bar">
+  <span><b>提案用デザインカンプ</b>｜Flowページ</span>
+  <button id="memoToggle">提案メモを隠す</button>
+  <a href="index.html">トップに戻る</a>
+</div>
+
+<script>
+document.getElementById('memoToggle').onclick=e=>{
+  const h=document.body.classList.toggle('hide-memo');
+  e.target.textContent=h?'提案メモを表示':'提案メモを隠す';
+};
+// スクロールに合わせて工程バーを進める
+const steps=[...document.querySelectorAll('.step')], links=[...document.querySelectorAll('#snav a')], bar=document.getElementById('sbar');
+function onScroll(){
+  const mid=innerHeight*0.45; let cur=-1;
+  steps.forEach((s,i)=>{ if(s.getBoundingClientRect().top<mid) cur=i; });
+  links.forEach((a,i)=>a.classList.toggle('on',i<=cur));
+  const first=steps[0].getBoundingClientRect().top, last=steps[steps.length-1].getBoundingClientRect().top;
+  bar.style.width=Math.max(0,Math.min(1,(mid-first)/(last-first)))*100+'%';
+}
+addEventListener('scroll',onScroll,{passive:true}); onScroll();
+</script>
+</body>
+</html>
